@@ -1,8 +1,14 @@
 
-$primary:#75CC74;
+$primary:#6FC974;
 $white:#fff;
 $text:#575757;
+$border:#CACACA;
 
+
+  .btn-primary{
+    background: $primary!important;
+    border-color: $primary!important;
+  }
 
 *{
   margin: 0;
@@ -12,6 +18,12 @@ $text:#575757;
 body{
   background: #f1f1f1;
 }
+
+.btn-fill{
+
+}
+
+
 .header-section{
   box-shadow: 1px 1px 11px #00000012;
   .navbar-brand{
@@ -103,3 +115,99 @@ body{
     }
   }
 }
+
+
+.two{
+  padding: 50px 0;
+  .sectitle{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    span{
+      color: $primary;
+    }
+  }
+  .sub-title{
+    margin-top: 15px;
+    text-align: center;
+    color: #969393;
+    width: 70%;
+    margin: 24px auto;
+    font-weight: 400;
+    font-size: 17px;
+
+  }
+  .started{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     align-items: center;
+    
+  }
+}
+
+.three{
+  @extend .two;
+ 
+    .swiper-container {
+      width: 100%;
+      height: 300px;
+
+      .swiper-slide {
+        color: #000;
+        text-align: center;
+        padding: 100px 0px; 
+      }
+
+    }
+    
+    
+  
+}
+
+button{
+  cursor: pointer;
+
+    &:focus{
+      outline: 0!important;
+    }
+     &.btn-fill{
+          flex-basis: 36%;
+          margin: 10px 30px;
+          background: #6FC971;
+          border: 0;
+          padding: 7px; 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #412831;
+          border-radius: 12px;
+          font-weight: 500;
+          outline: 0;
+          border: 2px solid transparent;
+          &:hover{
+            background-color: transparent;
+            border-color: $border;
+            color: $primary;
+          }
+     }
+     &.btn-outline{
+      flex-basis: 36%;
+      margin:10px 20px; 
+      border: 2px solid $border;
+      padding: 7px; 
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #75C670;
+      border-radius: 12px;
+      font-weight: 500;
+      outline: 0;
+      background: 0;
+      &:hover{
+        background-color:#75C670;
+        border-color: $primary;
+        color:$white;
+       
+      }
+ }
+ }
