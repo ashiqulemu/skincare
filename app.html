@@ -82,6 +82,28 @@
 
   </header>
 
+  <section class="lazy slider"  >
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <!-- this slide should inherit the sizes attr from the parent slider -->
+      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+    </div>
+  </section>
+
   <section class="two">
     <div class="container">
       <p class="sectitle">
@@ -296,6 +318,15 @@
         },
       ],
     });
+
+    $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true,
+        dots: true,
+        arrows: false,
+      });
+
+
   </script>
 </body>
 

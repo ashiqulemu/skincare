@@ -23,7 +23,11 @@ body{
   //background: #f1f1f1;
 }
  
-
+.lazy{
+  .slick-slide{
+    height: auto;
+  }
+}
 
 .header-section{
   box-shadow: 1px 1px 11px #00000012;
