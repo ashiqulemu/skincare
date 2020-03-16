@@ -1,5 +1,6 @@
+@import"./slick-theme.scss";
 
-$primary:#6FC974;
+$primary:#7CC470;
 $white:#fff;
 $text:#575757;
 $border:#CACACA;
@@ -7,7 +8,10 @@ $border:#CACACA;
 
   .btn-primary{
     background: $primary!important;
-    border-color: $primary!important;
+    border-color: $primary!important; 
+  }
+  .slick-prev:before, .slick-next:before{
+    color:$primary;
   }
 
 *{
@@ -16,12 +20,9 @@ $border:#CACACA;
 }
 
 body{
-  background: #f1f1f1;
+  //background: #f1f1f1;
 }
-
-.btn-fill{
-
-}
+ 
 
 
 .header-section{
@@ -123,7 +124,7 @@ body{
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     span{
       color: $primary;
     }
@@ -149,21 +150,187 @@ body{
 
 .three{
   @extend .two;
- 
-    .swiper-container {
-      width: 100%;
-      height: 300px;
 
-      .swiper-slide {
-        color: #000;
-        text-align: center;
-        padding: 100px 0px; 
-      }
-
+  .regular{
+    margin-top: 60px;
+  }
+  .slick-initialized .slick-slide { 
+    margin: 8px;
+    &:focus{
+      outline:0;
     }
+   }
+   
+  .slick-slide{
+    height: auto;
+  }
+  .product-card{
+    display: flex;
+    flex-direction: column;
+    border:1px solid #CBCBCB;
+    border-radius: 6px;
+     overflow: hidden;
+     text-align: center;
+
+     &:hover{
+      .title{
+        color:$primary;
+      }
+    }
+
+
+    img{
+      width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+    }
+    .name{
+      font-size: 1.7rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    .title{
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: capitalize;
+      color: #AAAAAA;
+      transform: translateY(-4px);
+    }
+    .rating{
+      text-align: center;
+      i{
+        margin: 0 5px;
+        color:#FF9531;
+        font-size: 1.3rem;
+      }
+    }
+    .dermo{
+      text-transform: uppercase;
+      padding: 8px 30px;
+      width: 84%;
+      border-radius: 5px;
+      border: 1px solid #B3B3B3;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #5a5a5a;
+      margin: 22px 0;
+      box-shadow: 0 3px 4px #0000001c;
+      transition: all 0.4s ease;
+      &:hover{
+        background: $primary;
+        color:$white;
+      }
+    }
+  }
     
     
   
+}
+
+.four{
+  @extend .three;
+  .sectitle{
+    .back-graphic{
+      background: url('../images/sec-title.png'); 
+      padding: 0 25px;
+    color: #fff;
+    background-position: 0px 3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    }
+  }
+  .post{
+    img{
+      width: 100%;
+      height: auto;
+      padding:15px;
+    }
+    .title{
+      text-transform: uppercase;
+      padding: 18px;
+      font-size: 1.7rem;
+      line-height: 1.3;
+      color: #333333;
+      font-weight: unset;
+      margin: 0;
+    }
+    .description{
+      color:#656565;
+      padding:0 18px;
+      font-size: 16.6px;
+      &::first-letter{
+        text-transform: uppercase;
+        
+      }
+    }
+    .read-more{
+       color:$primary;
+      padding-left: 18;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.five{
+  @extend .four;
+  background-image: linear-gradient(to right,#f4f3f1e3, #F1F1F1),url('../images/bg.jpg') ;
+  .people{
+    height: 100%;
+    position: relative;
+    img{
+      position: relative;
+      bottom: -50px;
+      left: 21%;
+
+      @media(max-width:768px){
+        position: relative;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  
+  .content{
+    .title{
+      text-transform: uppercase;
+      padding: 18px;
+      font-size: 1.7rem;
+      line-height: 1.3;
+      color: #333333;
+      font-weight: bold;
+      margin: 0;
+    }
+    .description{
+      color:#656565;
+      padding:0 18px;
+      font-size: 16.6px;
+      &::first-letter{
+        text-transform: uppercase;
+        
+      }
+    }
+    .more{
+      margin: 18px;
+      width: 70%;
+      background: #6FC971;
+      border: 0;
+      padding: 7px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #412831;
+      border-radius: 6px;
+      font-weight: 500;
+      outline: 0;
+      border: 2px solid transparent;
+      &:hover {
+        background-color: transparent;
+        border-color: #CACACA;
+        color: #7CC470;
+    }
+    }
+  }
 }
 
 button{

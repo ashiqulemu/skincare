@@ -6,9 +6,9 @@ var swiper = new Swiper('.swiper-container', {
   },
 
   slidesPerView: 4,
-  loopedSlides: 4,
+  loopedSlides:4,
   centeredSlides: true,
-  spaceBetween: 10,
+  spaceBetween: 20,
   grabCursor: true,
   loop: true,
   pagination: '.swiper-pagination',
@@ -18,7 +18,7 @@ var swiper = new Swiper('.swiper-container', {
     1200: {
       slidesPerView: 4,
       loopedSlides: 4,
-      spaceBetween: 10 },
+      spaceBetween:15 },
 
     1024: {
       slidesPerView: 3,
