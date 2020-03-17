@@ -26,6 +26,15 @@ body{
 .lazy{
   .slick-slide{
     height: auto;
+    position: relative;
+  }
+  &:before{
+    content:'';
+    position: absolute;
+    height:100%;
+    z-index: 1;
+    width: 100%;
+    background-image: url('../images/slider/slider-bg.png');
   }
 }
 
@@ -382,3 +391,249 @@ button{
       }
  }
  }
+
+
+ $primary:#8FCE75;
+$textColor: white;
+
+$black: #000;
+
+// ===============sign up section=====================
+
+#sign-up{
+    background: $primary;
+
+    .title{
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .form{
+        display: flex;
+
+        @media (max-width: 425px) {
+            flex-direction: column;
+        }
+
+        .name{
+            flex: 1;
+        }
+        .email{
+            flex: 1;
+            margin: 0 40px;
+
+            @media (max-width: 425px) {
+                margin-bottom: 20px;
+                margin: 0 0;
+            }
+        }
+        .button{
+            flex: 0.6;
+        }
+        .form-control{
+            border-radius: 0;
+            border: none;
+            line-height: 2.2;
+            @media (max-width: 425px) {
+            margin-bottom: 20px;
+            }
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+        .btn{
+            background: $textColor;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 0;
+            font-weight: 700;
+            line-height: 2.2;
+            &:hover{
+               background: darken($textColor, 10%); 
+            }
+        }
+    }
+}
+
+// ================instagram section============
+
+#instagram{
+    background: $textColor;
+
+    .title{
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 2.1rem;
+
+        .user-id{
+            color: $primary;
+        }
+    }
+
+    .images{
+        display: flex;
+        flex-wrap: wrap !important;
+        @media (max-width: 425px) {
+            flex-direction: column; 
+            .instagram-image{
+              overflow: hidden;
+              min-height: 277px; 
+             
+            }
+        }
+
+        .instagram-image{
+            flex: 1; 
+            margin: 5px; 
+            img{
+              width: 100%;
+              height: auto;
+            }
+        }
+    }
+}
+
+.footer{
+    background: lighten($black, 30%);
+
+    .skincare{
+        .skincare-pro{
+            font-size: 24px;
+            color: $primary;
+            font-weight: 700;
+            margin-bottom: 0 !important;
+            text-transform: uppercase;
+        }
+        .finder{
+            font-size: 24px;
+            color: $primary;
+            text-transform: uppercase;
+            margin-top: -7px;
+        }
+        .text{
+          color: #cecece;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+          font-size: 14px;
+        }
+    }
+
+    .title{
+        font-size: 20px;
+        color: $textColor;
+        text-transform: uppercase;
+    }
+
+    .quick-link{
+        padding-left: 50px;
+
+        @media (max-width: 425px) {
+            padding-left: 15px !important;
+            margin-top: 30px !important;
+        }
+        .links{
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+
+            @media (max-width: 425px) {
+                margin-top: 20px !important;
+            }
+
+            a{
+              color: #cecece;
+              text-transform: uppercase;
+              margin-bottom: 15px;
+              font-size: 14px;
+            }
+        }
+        
+    }
+
+    .contact{
+
+        @media (max-width: 425px) {
+            margin-top: 30px !important;
+        }
+
+        .contact-links{
+            margin-top: 60px;
+
+            @media (max-width: 425px) {
+                margin-top: 20px !important;
+            }
+
+            .link{
+                display: flex;
+                margin-bottom: 10px;
+
+                .icon{
+                    flex: 1;
+                    margin-top: 5px;
+                }
+                .url{
+                    flex: 6;
+                    //text-decoration: none;
+                    color: #cecece;
+                }
+            }
+        }
+        
+    }
+
+    .mail-form{
+
+        @media (max-width: 425px) {
+            margin-top: 30px !important;
+        }
+
+        .form{
+            .form-control{
+                border-radius: 0;
+                margin-bottom: 20px;
+                border: none;
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+
+            .btn{
+                background: $primary;
+                font-size: 18px;
+                text-transform: uppercase;
+                border-radius: 0;
+                font-weight: 700;
+
+                &:hover{
+                   background: darken($primary, 10%); 
+                }
+            }
+        }
+    }
+
+    hr{
+      border: 0.3px solid #444444;
+      margin: 0 !important; 
+    }
+
+    .copy-right{
+        color: lighten($black, 70%);
+
+        @media (max-width: 425px) {
+            margin-left: 20px;
+        }
+
+        .name{
+            color: $textColor;
+            font-size: 15px;
+        }
+    }
+    
+}
