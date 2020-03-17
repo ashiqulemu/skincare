@@ -19,9 +19,26 @@ $border:#CACACA;
   padding: 0;
 }
 
-body{
-  //background: #f1f1f1;
+@font-face {
+  font-family: poppins-regular;
+  src: url('../css//fonts//themes/Poppins-Regular.otf');
 }
+
+@font-face {
+  font-family: roboto-bold;
+  src: url('../css//fonts//themes/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url('../css//fonts//themes/Poppins-SemiBold.otf');
+}
+
+@font-face {
+  font-family: poppins-bold;
+  src: url('../css//fonts//themes/Poppins-Bold.otf');
+}
+ 
  
 .lazy{
   .slick-slide{
@@ -46,6 +63,7 @@ body{
     align-items: center;
     .toper{
       font-size: 1.6rem;
+      font-family: roboto-bold;
       span{
         text-transform: uppercase;
         font-weight:bold;
@@ -83,6 +101,7 @@ body{
         text-transform: uppercase;
         margin-right: 20px;
         font-weight: 500; 
+        font-family: poppins-regular;
       }
     }
    
@@ -138,6 +157,7 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 2.1rem;
+    font-family: poppins-semibold;
     span{
       color: $primary;
     }
@@ -267,11 +287,13 @@ body{
       color: #333333;
       font-weight: unset;
       margin: 0;
+      font-family: poppins-regular;
     }
     .description{
       color:#656565;
       padding:0 18px;
       font-size: 16.6px;
+      font-family: poppins-regular;
       &::first-letter{
         text-transform: uppercase;
         
@@ -314,11 +336,13 @@ body{
       color: #333333;
       font-weight: bold;
       margin: 0;
+      font-family: poppins-semibold;
     }
     .description{
       color:#656565;
       padding:0 18px;
       font-size: 16.6px;
+      font-family: poppins-regular;
       &::first-letter{
         text-transform: uppercase;
         
@@ -404,11 +428,12 @@ $black: #000;
     background: $primary;
 
     .title{
-        font-size: 24px;
+        font-size: 2rem;
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
         margin-bottom: 20px;
+        font-family: poppins-bold;
     }
 
     .form{
@@ -470,6 +495,7 @@ $black: #000;
       font-weight: bold;
       text-transform: uppercase;
       font-size: 2.1rem;
+      font-family: poppins-semibold;
 
         .user-id{
             color: $primary;
@@ -501,7 +527,7 @@ $black: #000;
 
 .footer{
     background: lighten($black, 30%);
-
+    font-family: poppins-regular;
     .skincare{
         .skincare-pro{
             font-size: 24px;
@@ -528,11 +554,12 @@ $black: #000;
         font-size: 20px;
         color: $textColor;
         text-transform: uppercase;
+        font-family: poppins-regular;
     }
 
     .quick-link{
         padding-left: 50px;
-
+       
         @media (max-width: 425px) {
             padding-left: 15px !important;
             margin-top: 30px !important;
