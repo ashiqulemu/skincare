@@ -80,17 +80,70 @@
 
   </header>
 
-  <section class="lazy slider">  
-    <div>
-      <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
+  <section class='homeBanner'>   
+
+    <div class="formSection">
+       <div class="title">
+          <p> Find a local  <span>skincare </span> </p> 
+      </div>
+
+      <div class="title">
+        <p> professional. </p>
     </div>
 
-    <div>
-      <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
+    <div class="formArea  d-flex flex-column  justify-content-center">
+        <div class="form-group">
+          <input type="text" class="form-control customInput" placeholder="WHAT ARE YOU LOOKING FOR ">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control customInput" placeholder="WHATS YOUR ZIP CODE"> 
+        </div>
+        <div class="form-group d-flex flex-wrap align-items-center justify-content-between">
+            <div class='text-secondary mobile-adjust'> <span> SEARCH</span> <br> <span>RADIUS:</span></div>
+          <div class="form-check">
+            <label class="form-check-label  text-secondary">
+              <input type="radio" class="form-check-input" name="optradio">5ml
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label  text-secondary">
+              <input type="radio" class="form-check-input" name="optradio">15ml
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label  text-secondary">
+              <input type="radio" class="form-check-input" name="optradio">25ml
+            </label>
+          </div>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label checkmark">
+            <input type="checkbox" class="form-check-input " name="others">
+            EXPERIENCE WITH SKIN OF COLOR
+          </label>
+        </div>
+
+        <button type="button" class="search-now mt-4">get started</button>
+        
+        
     </div>
+
+    </div>
+
+   <div class="lazy slider">
+        <div>
+          <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
+        </div>
+        <div>
+          <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
+        </div>
+
+        <div>
+          <img data-lazy="./images/slider/1.jpg" data-srcset="./images/slider/1.jpg, ./images/slider/1.jpg 960w" data-sizes="100vw">
+        </div>
+   </div>
+
+  
   </section>
 
   <section class="two">
@@ -331,14 +384,14 @@
 
 <div class="footer">
     <div class="container py-5">
-        <div class="row">
-            <div class="col-md-3 skincare">
+        <div class="row ">
+            <div class="col-xs-12 col-sm-6 col-lg-3 skincare">
                 <p class="skincare-pro m-0">skincare pro </p>
                 <p class="finder ">finder</p>
                 <p class="text mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius rerum fuga minima corrupti eveniet unde odit rem non suscipit tenetur.</p>
             </div>
 
-            <div class="col-md-3 quick-link">
+            <div class="col-xs-12 col-sm-6 col-lg-3 quick-link">
                 <p class="title">
                     quick links
                 </p>
@@ -349,7 +402,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 contact">
+            <div class="col-xs-12 col-sm-6 col-lg-3 contact">
                 <p class="title">
                     contact
                 </p>
@@ -369,7 +422,7 @@
                 </div>  
             </div>
 
-            <div class="col-md-3 mail-form">
+            <div class="col-xs-12 col-sm-6 col-lg-3 mail-form">
                 <p class="title">
                     join our mailing list
                 </p>
@@ -395,7 +448,7 @@
 
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
   <script>
     $(".regular").slick({
       autoplay: true,

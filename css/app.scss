@@ -5,6 +5,16 @@ $white:#fff;
 $text:#575757;
 $border:#CACACA;
 
+.mobile-adjust{
+  @media(max-width:425px){
+    width: 100%; 
+    padding: 10px 0;
+    br{
+      display: none;
+    }
+  }
+}
+
 
   .btn-primary{
     background: $primary!important;
@@ -12,6 +22,19 @@ $border:#CACACA;
   }
   .slick-prev:before, .slick-next:before{
     color:$primary;
+  }
+
+  .slick-prev{
+    @media(max-width:425px){
+      left:-12px;
+          z-index: 10;
+    }
+  }
+  .slick-next{
+    @media(max-width:425px){
+      right:-12px;
+          z-index: 10;
+    }
   }
 
 *{
@@ -38,9 +61,148 @@ $border:#CACACA;
   font-family: poppins-bold;
   src: url('../css//fonts//themes/Poppins-Bold.otf');
 }
+
+.slick-dots{
+  z-index:10;
+}
+
+.search-now{
+     width :80%;
+    margin: 0 auto;
+    background: #6FC971;
+    border: 0;
+    padding: 7px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #412831;
+    border-radius: 12px;
+    font-weight: 500;
+    outline: 0;
+    border: 2px solid transparent;    
+       &.mt-4{
+        @media(max-width:768px){ 
+          margin-top: 10px!important;
+       }
+    }
+}
+
+.checkmark{
+    margin-bottom: 0;
+    color: #6fc970;
+    font-size: 18px;
+    font-weight: 500;
+}
+.customInput{ 
+  background: #ECECEC!important;
+  border: 0!important;
+  padding: 14px 15px!important;
+
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgb(124, 196, 112)!important;
+  }
+}
+.customInput::placeholder{
+  color:#969696!important;
+  font-size: 1rem; 
+}
+ 
+.homeBanner{
+  position:relative;
+  .formSection{
+    position: absolute;
+    width :42%; 
+    right: 100;
+    padding :50px;
+    z-index: 2;
+    height: auto; 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media(max-width:1024px){ 
+      right: 0;  
+    }
+    @media(max-width:425px){
+      width:auto;
+      right: 0; 
+      position: relative;
+    }
+
+    @media(max-width:768px){    
+      padding: 25px;
+    }
+
+    .title{
+      font-size: 2.9rem;
+      font-weight: bold;
+      background: #fff;
+      padding: 0 25px;
+      height: 41px;
+
+      @media(max-width:1024px){
+          font-size: 1.7rem!important;   
+          padding: 5px 8px;
+          height: 37px; 
+        }
+        @media(max-width:768px){ 
+           font-size: 1.5rem!important;
+        }
+      @media(max-width:425px){
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem!important;
+        }
+
+      &:nth-child(2){
+        margin-top:50px;
+        @media(max-width:1024px){
+          margin-top:30px;
+        } 
+        @media(max-width:768px){
+          margin-top:5px;
+        }
+      }
+
+      p{
+        margin: 0;
+        transform: translateY(-2px);
+        @media(max-width:1024px){
+          transform: translateY(-8px);
+        }
+      }
+ 
+      span{
+        color:$primary;
+      }
+    }
+    .formArea{
+      background: #ffff;
+      padding: 40px;
+      min-width: 450px;
+      margin-top: 47px;
+      border-radius: 15px 0 0 15px;
+      @media(max-width:768px){
+        margin-top:5px;
+        background: #fffffff0;
+      } 
+      @media(max-width:425px){
+        min-width: 0;
+        margin: 0 auto ;
+        padding: 20px;
+      }
+    }
+  }
+
+  @media(max-width:425px){ 
+   display: flex;
+   flex-direction: column-reverse;
+ }
+
+}
  
  
 .lazy{
+  position: relative;
   .slick-slide{
     height: auto;
     position: relative;
@@ -52,6 +214,12 @@ $border:#CACACA;
     z-index: 1;
     width: 100%;
     background-image: url('../images/slider/slider-bg.png');
+
+    @media(max-width:768px){
+      background-position: 42% 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -177,6 +345,10 @@ $border:#CACACA;
     flex-wrap: wrap;
     justify-content: center;
      align-items: center;
+
+     @media(max-width:768px) {
+       flex-direction: column;
+     }
     
   }
 }
@@ -527,7 +699,7 @@ $black: #000;
 
 .footer{
     background: lighten($black, 30%);
-    font-family: poppins-regular;
+    font-family: poppins-regular; 
     .skincare{
         .skincare-pro{
             font-size: 24px;
@@ -569,8 +741,8 @@ $black: #000;
             flex-direction: column;
             margin-top: 60px;
 
-            @media (max-width: 425px) {
-                margin-top: 20px !important;
+            @media (max-width: 768px) {
+                margin-top: 0;
             }
 
             a{
@@ -592,9 +764,9 @@ $black: #000;
         .contact-links{
             margin-top: 60px;
 
-            @media (max-width: 425px) {
-                margin-top: 20px !important;
-            }
+            @media (max-width: 768px) {
+              margin-top: 0;
+          }
 
             .link{
                 display: flex;
@@ -651,10 +823,11 @@ $black: #000;
     }
 
     .copy-right{
-        color: lighten($black, 70%);
-
-        @media (max-width: 425px) {
-            margin-left: 20px;
+        color: lighten($black, 70%); 
+        @media (max-width: 768px) { 
+          color: #b3b3b3;
+          width: 100%; 
+          text-align: center;
         }
 
         .name{
